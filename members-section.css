@@ -1,0 +1,92 @@
+/* CSS สำหรับส่วนสมาชิกกลุ่ม — วางในไฟล์ CSS ของเว็บไซต์ */
+.group-members {
+  padding: 64px 20px;
+  background: linear-gradient(180deg, #eefaff 0%, #ffffff 100%);
+  color: #17324d;
+}
+
+.members-heading {
+  max-width: 1100px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.members-eyebrow {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #168ac5;
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .18em;
+}
+
+.members-heading h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.members-heading p {
+  margin: 10px 0 0;
+  color: #60758a;
+}
+
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.member-card {
+  overflow: hidden;
+  border: 1px solid #dcecf5;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(30, 94, 130, .10);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(30, 94, 130, .16);
+}
+
+.member-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center top;
+  background: #dff5ff;
+}
+
+.member-info {
+  padding: 18px 14px 20px;
+  text-align: center;
+}
+
+.member-id {
+  margin: 0 0 7px;
+  color: #168ac5;
+  font-size: .9rem;
+  font-weight: 800;
+  letter-spacing: .03em;
+}
+
+.member-info h3 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 850px) {
+  .members-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+}
+
+@media (max-width: 420px) {
+  .group-members { padding: 44px 14px; }
+  .members-grid { gap: 12px; }
+  .member-info { padding: 14px 9px 16px; }
+  .member-info h3 { font-size: .9rem; }
+}
